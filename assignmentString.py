@@ -12,7 +12,6 @@ def count_components(s: str):
         elif ch.isdigit():
             digits += 1
         else:
-            # Anything not alphanumeric is considered special: spaces, punctuation, symbols
             specials += 1
 
     return {"vowels": vowels, "consonants": consonants, "digits": digits, "specials": specials}
@@ -21,7 +20,7 @@ def count_components(s: str):
 # Demo
 s = "Vodafone @2025 rocks!"
 counts = count_components(s)
-print(counts)  # {'vowels': 7, 'consonants': 8, 'digits': 4, 'specials': 3}
+print(counts)  
 
 
 
@@ -35,7 +34,7 @@ print(reverse_each_word("I am soham"))
 
 #Question 3
 def is_palindrome_indexing(s: str) -> bool:
-    # Optional normalization: remove spaces and lowercase (comment if not desired)
+    
     s = s.replace(" ", "").lower()
     i, j = 0, len(s) - 1
     while i < j:
@@ -65,7 +64,7 @@ def char_frequency(s: str):
 # Demo
 s = "abbcccde!!"
 freq = char_frequency(s)
-print(freq)  # {'a': 1, 'b': 2, 'c': 3, 'd': 1, 'e': 1, '!': 2}
+print(freq) 
 
 
 #Question 5
@@ -73,7 +72,7 @@ print(freq)  # {'a': 1, 'b': 2, 'c': 3, 'd': 1, 'e': 1, '!': 2}
 def demonstrate_immutability():
     try:
         s = "Vodafone"
-        # Strings are immutable in Python: this will raise a TypeError
+        
         s[0] = 'B'
     except TypeError as e:
         print("Caught TypeError as expected:", e)
@@ -90,3 +89,4 @@ demonstrate_immutability()
 # Caught TypeError as expected: 'str' object does not support item assignment
 # Original: Vodafone
 # Modified: Bodafone
+
