@@ -3,14 +3,14 @@ def dedupe_preserve_order(lst):
     result = []
     seen = []
     for x in lst:
-        if x not in seen:  # O(n) check: overall O(n^2) in worst case
+        if x not in seen:  
             seen.append(x)
             result.append(x)
     return result
 
 # Demo
 data = [3, 1, 2, 3, 2, 4, 1, 5, 5]
-print(dedupe_preserve_order(data))  # [3, 1, 2, 4, 5]
+print(dedupe_preserve_order(data)) 
 
 #Question2
 
@@ -19,7 +19,7 @@ def evens_only(nums):
 
 # Demo
 nums = [10, 11, 12, 13, 14, 15]
-print(evens_only(nums))  # [10, 12, 14]
+print(evens_only(nums))
 
 
 #Question3
@@ -43,7 +43,7 @@ def sums_of_inner_lists(nested):
 
 # Demo
 nested = [[1, 2, 3], [10, -5, 5], [], [7]]
-print(sums_of_inner_lists(nested))  # [6, 10, 0, 7]
+print(sums_of_inner_lists(nested))  
 
 #Question 5
 
@@ -52,11 +52,11 @@ import copy
 def demonstrate_copy_behavior():
     original = [[1, 2], [3, 4], [5, [6, 7]]]
 
-    shallow = original.copy()         # or list(original) or copy.copy(original)
+    shallow = original.copy()        
     deep = copy.deepcopy(original)
 
     # Mutate inner elements
-    original[0][0] = 999            # change inside first inner list
+    original[0][0] = 999           
     original[2][1].append(8)        # mutate nested inner list [6,7] -> [6,7,8]
 
     print("Original:", original)
@@ -65,9 +65,10 @@ def demonstrate_copy_behavior():
 
 # Demo
 demonstrate_copy_behavior()
-# Example output:
+
 # Original: [[999, 2], [3, 4], [5, [6, 7, 8]]]
 # Shallow : [[999, 2], [3, 4], [5, [6, 7, 8]]]
 # Deep    : [[1, 2], [3, 4], [5, [6, 7]]]
+
 
 
